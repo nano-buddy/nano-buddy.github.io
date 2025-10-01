@@ -14,15 +14,42 @@
 
     header {
       background-color: #4aa3f0;
-      padding: 2rem 1rem 1rem 1rem;
+      padding: 1rem;
       color: white;
     }
 
+    /* wrapper for nav + centered content */
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* navigation links (left) */
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #338ad9;
+    }
+
+    /* title + logo (centered) */
     .header-content {
       display: flex;
-      justify-content: center;   /* keep text + logo centered as a group */
       align-items: center;
-      gap: 1rem;                 /* spacing between text and logo */
+      gap: 1rem;
+      margin: 0 auto; /* keeps it centered */
     }
 
     .header-content h1 {
@@ -33,6 +60,12 @@
     .header-content img {
       width: 80px;
       height: auto;
+    }
+
+    /* spacer balances layout (right side) */
+    .header-spacer {
+      flex: 1;
+      max-width: 300px; /* optional */
     }
 
     main {
@@ -119,17 +152,30 @@
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <h1>Nano Buddy</h1>
-      <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo" style="background-color: transparent;">
+    <div class="header-inner">
+      <!-- nav links on left -->
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="TopScores.html">Top Scores</a>
+        <a href="ContactForm.html">Contact</a>
+      </nav>
+
+      <!-- centered title + logo -->
+      <div class="header-content">
+        <h1>Nano Buddy</h1>
+        <img src="MorphNanoBuddy5.svg" alt="Nano Buddy Logo" style="background-color: transparent;">
+      </div>
+
+      <!-- spacer to balance flex -->
+      <div class="header-spacer"></div>
     </div>
   </header>
   
   <main>
     <h2>Predict Custom Nanobodies with Machine Learning</h2>
     <p>
-      Fill out the form below to upload your FASTA target sequence. 
-      We'll process your submission and send the Top 10 nanobody prediction results to your email.
+      Fill out the form below to upload your FASTA target sequence.<br> 
+      We'll process your submission and send the Top 10 nanobody prediction results to your email.<br>
       (Shorter inputs = faster results, ~20min/amino acid)
     </p>
 
