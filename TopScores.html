@@ -15,20 +15,24 @@
       min-height: 100vh;
     }
 
+    /* Fixed header layout */
     header {
       background-color: #4aa3f0;
-      padding: 1rem;
       color: white;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center; /* center title/logo */
+      position: relative;
+      padding: 1rem;
     }
 
-    /* nav buttons (left side) */
+    /* nav buttons on the left */
     .nav-links {
+      position: absolute;
+      left: 1rem;
       display: flex;
       gap: 1rem;
     }
@@ -46,28 +50,21 @@
       background-color: #338ad9;
     }
 
-    /* title + logo (centered) */
+    /* title + logo centered */
     .header-content {
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin: 0 auto;
     }
 
     .header-content h1 {
       margin: 0;
-      font-size: 3.5rem;
+      font-size: 3.5rem; /* matches Contact page */
     }
 
     .header-content img {
       width: 80px;
       height: auto;
-    }
-
-    /* spacer to balance flex */
-    .header-spacer {
-      flex: 1;
-      max-width: 300px;
     }
 
     main {
@@ -119,6 +116,11 @@
       color: #666;
       border-top: 1px solid #e0e0e0;
     }
+
+    /* Scrollable table wrapper for long sequences */
+    .table-wrapper {
+      overflow-x: auto;
+    }
   </style>
 </head>
 <body>
@@ -134,18 +136,15 @@
       <!-- centered title + logo -->
       <div class="header-content">
         <h1>Nano Buddy</h1>
-        <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo">
+        <img src="MorphNanoBuddy5.svg" alt="Nano Buddy Logo">
       </div>
-
-      <!-- spacer for centering -->
-      <div class="header-spacer"></div>
     </div>
   </header>
 
   <main>
     <h2>Top Hits Leaderboard</h2>
 
-    <div style="overflow-x:auto;">
+    <div class="table-wrapper">
       <table>
         <thead>
           <tr>
@@ -160,6 +159,7 @@
             <td>0.88159317</td>
             <td>VQLVESGGGLVQPGGSLRLSCLASGVSVSRFAMRWYRQGPGKEREFVATISRAGAITSYADSVRGRFTISRDNHKDTVYLDMKNLKSDDTAFYYCTAPSEDYWGQGTQVTVSS</td>
           </tr>
+          <!-- Add more rows as needed -->
         </tbody>
       </table>
     </div>
@@ -170,3 +170,4 @@
   </footer>
 </body>
 </html>
+
