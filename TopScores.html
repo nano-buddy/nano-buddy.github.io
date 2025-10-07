@@ -22,15 +22,16 @@
 	  padding: 1rem;
 	}
 	
+	/* identical structure for all pages */
 	.header-inner {
 	  display: flex;
 	  align-items: center;
 	  justify-content: space-between;
-	  position: relative;
 	  max-width: 1200px;
 	  margin: 0 auto;
 	}
 	
+	/* navigation links on left */
 	.nav-links {
 	  display: flex;
 	  gap: 1rem;
@@ -49,14 +50,12 @@
 	  background-color: #338ad9;
 	}
 	
-	/* Centered title + logo */
+	/* centered title + logo */
 	.header-content {
 	  display: flex;
 	  align-items: center;
 	  gap: 1rem;
-	  position: absolute;
-	  left: 50%;
-	  transform: translateX(-50%);
+	  margin: 0 auto; /* centers horizontally */
 	}
 	
 	.header-content h1 {
@@ -67,6 +66,12 @@
 	.header-content img {
 	  width: 80px;
 	  height: auto;
+	}
+	
+	/* spacer to balance flex layout */
+	.header-spacer {
+	  flex: 1;
+	  max-width: 300px; /* adjust for perfect centering if needed */
 	}
 
     main {
@@ -127,21 +132,24 @@
 </head>
 <body>
   <header>
-    <div class="header-inner">
-      <!-- nav buttons -->
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="TopScores.html">Top Scores</a>
-        <a href="ContactForm.html">Contact</a>
-      </nav>
-
-      <!-- centered title + logo -->
-      <div class="header-content">
-        <h1>Nano Buddy</h1>
-        <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo">
-      </div>
-    </div>
-  </header>
+	  <div class="header-inner">
+	    <!-- nav links on left -->
+	    <nav class="nav-links">
+	      <a href="index.html">Home</a>
+	      <a href="TopScores.html">Top Scores</a>
+	      <a href="ContactForm.html">Contact</a>
+	    </nav>
+	
+	    <!-- centered title + logo -->
+	    <div class="header-content">
+	      <h1>Nano Buddy</h1>
+	      <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo">
+	    </div>
+	
+	    <!-- right-side spacer balances layout -->
+	    <div class="header-spacer"></div>
+	  </div>
+	</header>
 
   <main>
     <h2>Top Scores Leaderboard</h2>
