@@ -18,23 +18,26 @@
 
     header {
       background-color: #4aa3f0;
-      padding: 1rem;
       color: white;
+      padding: 1rem 2rem; /* consistent inner spacing */
     }
-
-    /* wrapper for nav + centered content */
+    
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
+      max-width: 1200px;   /* ensures same total width across pages */
+      margin: 0 auto;
     }
-
-    /* navigation links (left) */
+    
+    /* nav links (left side) */
     .nav-links {
       display: flex;
       gap: 1rem;
+      flex-shrink: 0; /* prevents shrinking when screen narrows */
     }
-
+    
     .nav-links a {
       color: white;
       text-decoration: none;
@@ -42,34 +45,36 @@
       padding: 0.5rem 1rem;
       border-radius: 6px;
       transition: background-color 0.3s;
+      white-space: nowrap;
     }
-
+    
     .nav-links a:hover {
       background-color: #338ad9;
     }
-
-    /* title + logo (centered) */
+    
+    /* title + logo centered */
     .header-content {
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin: 0 auto; /* keeps it centered */
+      margin: 0 auto;
+      flex-shrink: 0;
     }
-
+    
     .header-content h1 {
       margin: 0;
       font-size: 3.5rem;
     }
-
+    
     .header-content img {
       width: 80px;
       height: auto;
     }
-
-    /* spacer balances layout (right side) */
+    
+    /* spacer balances the flex layout on right side */
     .header-spacer {
       flex: 1;
-      max-width: 300px; /* adjust if you need more centering */
+      max-width: 220px; /* this ensures equal horizontal centering */
     }
 
     main {
@@ -123,20 +128,20 @@
 <body>
   <header>
     <div class="header-inner">
-      <!-- nav links on left -->
+      <!-- left: nav -->
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="TopScores.html">Top Scores</a>
         <a href="ContactForm.html">Contact</a>
       </nav>
-
-      <!-- centered title + logo -->
+  
+      <!-- center: title + logo -->
       <div class="header-content">
         <h1>Nano Buddy</h1>
         <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo">
       </div>
-
-      <!-- spacer to balance flex -->
+  
+      <!-- right: spacer to balance flex -->
       <div class="header-spacer"></div>
     </div>
   </header>
