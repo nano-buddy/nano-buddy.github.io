@@ -19,22 +19,23 @@
     header {
 	  background-color: #4aa3f0;
 	  color: white;
-	  padding: 1rem;
+	  padding: 1rem 2rem; /* consistent inner spacing */
 	}
 	
-	/* identical structure for all pages */
 	.header-inner {
 	  display: flex;
 	  align-items: center;
 	  justify-content: space-between;
-	  max-width: 1200px;
+	  position: relative;
+	  max-width: 1200px;   /* ensures same total width across pages */
 	  margin: 0 auto;
 	}
 	
-	/* navigation links on left */
+	/* nav links (left side) */
 	.nav-links {
 	  display: flex;
 	  gap: 1rem;
+	  flex-shrink: 0; /* prevents shrinking when screen narrows */
 	}
 	
 	.nav-links a {
@@ -44,18 +45,20 @@
 	  padding: 0.5rem 1rem;
 	  border-radius: 6px;
 	  transition: background-color 0.3s;
+	  white-space: nowrap;
 	}
 	
 	.nav-links a:hover {
 	  background-color: #338ad9;
 	}
 	
-	/* centered title + logo */
+	/* title + logo centered */
 	.header-content {
 	  display: flex;
 	  align-items: center;
 	  gap: 1rem;
-	  margin: 0 auto; /* centers horizontally */
+	  margin: 0 auto;
+	  flex-shrink: 0;
 	}
 	
 	.header-content h1 {
@@ -68,10 +71,10 @@
 	  height: auto;
 	}
 	
-	/* spacer to balance flex layout */
+	/* spacer balances the flex layout on right side */
 	.header-spacer {
 	  flex: 1;
-	  max-width: 300px; /* adjust for perfect centering if needed */
+	  max-width: 220px; /* this ensures equal horizontal centering */
 	}
 
     main {
@@ -131,23 +134,23 @@
   </style>
 </head>
 <body>
-  <header>
+	<header>
 	  <div class="header-inner">
-	    <!-- nav links on left -->
-	    <nav class="nav-links">
-	      <a href="index.html">Home</a>
-	      <a href="TopScores.html">Top Scores</a>
-	      <a href="ContactForm.html">Contact</a>
-	    </nav>
+		<!-- left: nav -->
+		<nav class="nav-links">
+		  <a href="index.html">Home</a>
+		  <a href="TopScores.html">Top Scores</a>
+		  <a href="ContactForm.html">Contact</a>
+		</nav>
 	
-	    <!-- centered title + logo -->
-	    <div class="header-content">
-	      <h1>Nano Buddy</h1>
-	      <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo">
-	    </div>
+		<!-- center: title + logo -->
+		<div class="header-content">
+		  <h1>Nano Buddy</h1>
+		  <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo">
+		</div>
 	
-	    <!-- right-side spacer balances layout -->
-	    <div class="header-spacer"></div>
+		<!-- right: spacer to balance flex -->
+		<div class="header-spacer"></div>
 	  </div>
 	</header>
 
