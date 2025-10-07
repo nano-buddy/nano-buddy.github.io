@@ -16,57 +16,58 @@
       min-height: 100vh;
     }
 
-    /* Fixed header layout */
     header {
-      background-color: #4aa3f0;
-      color: white;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center; /* center title/logo */
-      position: relative;
-      padding: 1rem;
-    }
-
-    /* nav buttons on the left */
-    .nav-links {
-      position: absolute;
-      left: 1rem;
-      display: flex;
-      gap: 1rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-
-    .nav-links a:hover {
-      background-color: #338ad9;
-    }
-
-    /* title + logo centered */
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .header-content h1 {
-      margin: 0;
-      font-size: 3.5rem; /* matches Contact page */
-    }
-
-    .header-content img {
-      width: 80px;
-      height: auto;
-    }
+	  background-color: #4aa3f0;
+	  color: white;
+	  padding: 1rem;
+	}
+	
+	.header-inner {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  position: relative;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
+	
+	.nav-links {
+	  display: flex;
+	  gap: 1rem;
+	}
+	
+	.nav-links a {
+	  color: white;
+	  text-decoration: none;
+	  font-weight: bold;
+	  padding: 0.5rem 1rem;
+	  border-radius: 6px;
+	  transition: background-color 0.3s;
+	}
+	
+	.nav-links a:hover {
+	  background-color: #338ad9;
+	}
+	
+	/* Centered title + logo */
+	.header-content {
+	  display: flex;
+	  align-items: center;
+	  gap: 1rem;
+	  position: absolute;
+	  left: 50%;
+	  transform: translateX(-50%);
+	}
+	
+	.header-content h1 {
+	  margin: 0;
+	  font-size: 3.5rem;
+	}
+	
+	.header-content img {
+	  width: 80px;
+	  height: auto;
+	}
 
     main {
       flex: 1;
