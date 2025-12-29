@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nano Buddy - Top Hits Leaderboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f0f9ff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Fixed header layout */
+    header {
+      background-color: #4aa3f0;
+      color: white;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* center title/logo */
+      position: relative;
+      padding: 1rem;
+    }
+
+    /* nav buttons on the left */
+    .nav-links {
+      position: absolute;
+      left: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #338ad9;
+    }
+
+    /* title + logo centered */
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 3.5rem; /* matches Contact page */
+    }
+
+    .header-content img {
+      width: 80px;
+      height: auto;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+	
+	main h3 {
+      text-align: center;
+      font-size: 1.0rem;
+      margin-bottom: 2rem;
+    }
+
+	table {
+	  width: 100%;
+	  border-collapse: collapse;
+	  table-layout: fixed; /* keeps column widths stable */
+	  text-align: center;  /* center content of all cells */
+	}
+
+	th, td {
+	  padding: 1rem;
+	  border-bottom: 1px solid #ddd;
+	  font-size: 0.95rem;
+	  vertical-align: middle;
+	  text-align: center; /* ensures header + body cells are centered */
+	  overflow-wrap: break-word;
+	}
+
+	thead {
+	  background-color: #4aa3f0;
+	  color: white;
+	}
+
+	th:nth-child(1) { width: 40%; }
+	th:nth-child(2) { width: 20%; }
+	th:nth-child(3) { width: 40%; }
+
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background-color: #f8fafc;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    /* Scrollable table wrapper for long sequences */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+	
+	.buy-btn {
+	  background-color: #4aa3f0;
+	  color: white;
+	  border: none;
+	  padding: 0.6rem 1.2rem;
+	  border-radius: 6px;
+	  font-size: 0.9rem;
+	  cursor: pointer;
+	  transition: background-color 0.3s;
+	}
+
+	.buy-btn:hover {
+	  background-color: #338ad9;
+	}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <!-- nav buttons -->
+      <nav class="nav-links">
+        <a href="index.html">Predict</a>
+        <a href="NanobodyBuy.html">Products</a> <!--Products?-->
+        <a href="ContactForm.html">Contact</a>
+      </nav>
+
+      <!-- centered title + logo -->
+      <div class="header-content">
+        <h1>Nano Buddy</h1>
+        <img src="MorphNanoBuddy5.svg" alt="Nano Buddy Logo">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>The "Mark-It" Place (Verified Nanobody Binders)</h2>
+	<h3>If you can't find what you're looking for, submit a custom request and we'll make it for you!</h3>
+
+	<div class="table-wrapper">
+	  <table>
+		<thead>
+		  <tr>
+			<th>Antigen ID</th>
+			<th>Price (50µL)</th>
+			<th>Buy Now!</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>*Custom* (Top prediction, Untested)</td>
+			<td>$199.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>		
+		  <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		  </tr>		  
+		  <tr>
+			<td>GFP</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>mCherry</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		  </tr>		  
+		  <tr>
+			<td>6X-His Tag</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>GST Tag</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>		  
+		  <tr>
+			<td>Alfa Tag</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>EPEA Tag</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>Bc2 Peptide Tag</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>	
+		  <tr>
+			<td>V5 Tag</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>			  
+		  <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		  </tr>			  
+			<td>GAPDH (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>β-actin (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>α-tubulin (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>			  
+		  <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		  </tr>
+		  <tr>
+			<td>Rabbit Secondary</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>	
+		  <tr>
+			<td>Mouse Secondary</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>	
+		  <tr>
+			<td>Mouse IgG1 Secondary</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>	
+		  <tr>
+			<td>Mouse IgG2a Secondary</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>	
+		  <tr>
+			<td>Mouse IgG2b Secondary</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>	
+		  <tr>
+			<td>Mouse/Rabbit IgG3 Secondary</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>	
+		  <tr>
+			<td>Goat Secondary</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>			  
+		  <tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		  </tr>			  
+		  <tr>
+			<td>Cd38 (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>p53 (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>Tnf (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>		  
+		  <tr>
+			<td>PHYH (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>PDGFR Beta (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>HNMT (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>Insulin Receptor (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>IDI2 (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>PD-L1 (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>MZB1/PERP1 (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>PMVK (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>RFK (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>IL-7Ra (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>
+		  <tr>
+			<td>EGFR (Human)</td>
+			<td>$99.99</td>
+			<td><button class="buy-btn">Buy Now</button></td>
+		  </tr>		  
+		</tbody>
+	  </table>
+	</div>
+
+  </main>
+
+  <footer>
+    <p>Powered by DeepNano</p>
+  </footer>
+</body>
+</html>
