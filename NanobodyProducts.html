@@ -3,148 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nano Buddy</title>
-  <link rel="icon" href="NanoBuddyMascotB.svg" sizes="32x32" />
+  <title>Nano Buddy - Top Hits Leaderboard</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background-color: #f0f9ff;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #4aa3f0;
-      color: white;
-      padding: 1rem 2rem; /* consistent inner spacing */
-    }
-    
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-      max-width: 1200px;   /* ensures same total width across pages */
-      margin: 0 auto;
-    }
-    
-    /* nav links (left side) */
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-      flex-shrink: 0; /* prevents shrinking when screen narrows */
-    }
-    
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-      white-space: nowrap;
-    }
-    
-    .nav-links a:hover {
-      background-color: #338ad9;
-    }
-    
-    /* title + logo centered */
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin: 0 auto;
-      flex-shrink: 0;
-    }
-    
-    .header-content h1 {
-      margin: 0;
-      font-size: 3.5rem;
-    }
-    
-    .header-content img {
-      width: 80px;
-      height: auto;
-    }
-    
-    /* spacer balances the flex layout on right side */
-    .header-spacer {
-      flex: 1;
-      max-width: 250px; /* this ensures equal horizontal centering */
-    }
+  background-color: #4aa3f0;
+  color: white;
+  padding: 1rem 2rem; /* consistent inner spacing */
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1200px;   /* ensures same total width across pages */
+  margin: 0 auto;
+}
+
+/* nav links (left side) */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0; /* prevents shrinking when screen narrows */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  background-color: #338ad9;
+}
+
+/* title + logo centered */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+.header-content img {
+  width: 80px;
+  height: auto;
+}
+
+/* spacer balances the flex layout on right side */
+.header-spacer {
+  flex: 1;
+  max-width: 250px; /* ensures equal horizontal centering */
+}
 
     main {
-      max-width: 700px;
+      flex: 1;
+      max-width: 1000px;
       margin: 2rem auto;
       background: white;
-      padding: 0.5rem 2rem 2rem 2rem;
+      padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     main h2 {
       text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    main p {
-      text-align: center;
+      font-size: 1.8rem;
       margin-bottom: 2rem;
-      font-size: 1rem;
-      color: #555;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    label {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-
-    textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-
-    button {
-      background-color: #4aa3f0;
-      color: white;
-      padding: 1rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #338ad9;
-    }
-
-    .message {
-      margin-top: 1rem;
-      font-size: 1rem;
+	
+	main h3 {
       text-align: center;
+      font-size: 1.0rem;
+      margin-bottom: 2rem;
     }
-    
+
+	table {
+	  width: 100%;
+	  border-collapse: collapse;
+	  table-layout: fixed; /* keeps column widths stable */
+	  text-align: center;  /* center content of all cells */
+	}
+
+	th, td {
+	  padding: 1rem;
+	  border-bottom: 1px solid #ddd;
+	  font-size: 0.95rem;
+	  vertical-align: middle;
+	  text-align: center; /* ensures header + body cells are centered */
+	  overflow-wrap: break-word;
+	}
+
+	thead {
+	  background-color: #4aa3f0;
+	  color: white;
+	}
+
+	th:nth-child(1) { width: 40%; }
+	th:nth-child(2) { width: 20%; }
+	th:nth-child(3) { width: 40%; }
+
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -154,25 +133,49 @@
       color: #666;
       border-top: 1px solid #e0e0e0;
     }
+
+    /* Scrollable table wrapper for long sequences */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+	
+	.buy-btn {
+	  background-color: #4aa3f0;
+	  color: white;
+	  border: none;
+	  padding: 0.6rem 1.2rem;
+	  border-radius: 6px;
+	  font-size: 0.9rem;
+	  cursor: pointer;
+	  transition: background-color 0.3s;
+	}
+
+	.buy-btn:hover {
+	  background-color: #338ad9;
+	}
+
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <!-- nav buttons -->
-      <nav class="nav-links">
-        <a href="index.html">Predict</a>
-        <a href="NanobodyProducts.html">Products</a> <!--Products?-->
-        <a href="ContactForm.html">Contact</a>
-      </nav>
-
-      <!-- centered title + logo -->
-      <div class="header-content">
-        <h1>Nano Buddy</h1>
-        <img src="NanoBuddyMascot.svg" alt="Nano Buddy Logo">
-      </div>
-    </div>
-  </header>
+	<header>
+	  <div class="header-inner">
+	    <!-- left: nav -->
+	    <nav class="nav-links">
+	      <a href="index.html">Predict</a>
+	      <a href="NanobodyBuy.html">Products</a>
+	      <a href="ContactForm.html">Contact</a>
+	    </nav>
+	
+	    <!-- center: title + logo -->
+	    <div class="header-content">
+	      <h1>Nano Buddy</h1>
+	      <img src="MorphNanoBuddy5.svg" alt="Nano Buddy Logo">
+	    </div>
+	
+	    <!-- right: spacer to balance flex -->
+	    <div class="header-spacer"></div>
+	  </div>
+	</header>
 
   <main>
     <h2>The "Mark-It" Place (Verified Nanobody Binders)</h2>
@@ -388,6 +391,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
